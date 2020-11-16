@@ -9,12 +9,14 @@
 /* Begin PBXBuildFile section */
 		CEA62CBF255BE62B008A3286 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA62CBE255BE62B008A3286 /* AppDelegate.swift */; };
 		CEA62CC1255BE62B008A3286 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA62CC0255BE62B008A3286 /* SceneDelegate.swift */; };
-		CEA62CC3255BE62B008A3286 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA62CC2255BE62B008A3286 /* ViewController.swift */; };
 		CEA62CC6255BE62B008A3286 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEA62CC4255BE62B008A3286 /* Main.storyboard */; };
 		CEA62CC8255BE62D008A3286 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEA62CC7255BE62D008A3286 /* Assets.xcassets */; };
 		CEA62CCB255BE62D008A3286 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEA62CC9255BE62D008A3286 /* LaunchScreen.storyboard */; };
 		CEA62CD6255BE62E008A3286 /* NBAPlayersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA62CD5255BE62E008A3286 /* NBAPlayersTests.swift */; };
 		CEA62CE1255BE62E008A3286 /* NBAPlayersUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA62CE0255BE62E008A3286 /* NBAPlayersUITests.swift */; };
+		CEA62CF5255BE89A008A3286 /* PlayersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA62CF4255BE89A008A3286 /* PlayersViewController.swift */; };
+		CEA62CFA255BEBDF008A3286 /* PlayerDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA62CF9255BEBDF008A3286 /* PlayerDetailsViewController.swift */; };
+		CEA62CFF255BFFDC008A3286 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA62CFE255BFFDC008A3286 /* Player.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +40,6 @@
 		CEA62CBB255BE62B008A3286 /* NBAPlayers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NBAPlayers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEA62CBE255BE62B008A3286 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CEA62CC0255BE62B008A3286 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		CEA62CC2255BE62B008A3286 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		CEA62CC5255BE62B008A3286 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CEA62CC7255BE62D008A3286 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CEA62CCA255BE62D008A3286 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +50,9 @@
 		CEA62CDC255BE62E008A3286 /* NBAPlayersUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NBAPlayersUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEA62CE0255BE62E008A3286 /* NBAPlayersUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NBAPlayersUITests.swift; sourceTree = "<group>"; };
 		CEA62CE2255BE62E008A3286 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CEA62CF4255BE89A008A3286 /* PlayersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayersViewController.swift; sourceTree = "<group>"; };
+		CEA62CF9255BEBDF008A3286 /* PlayerDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerDetailsViewController.swift; sourceTree = "<group>"; };
+		CEA62CFE255BFFDC008A3286 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,11 +105,13 @@
 			children = (
 				CEA62CBE255BE62B008A3286 /* AppDelegate.swift */,
 				CEA62CC0255BE62B008A3286 /* SceneDelegate.swift */,
-				CEA62CC2255BE62B008A3286 /* ViewController.swift */,
 				CEA62CC4255BE62B008A3286 /* Main.storyboard */,
 				CEA62CC7255BE62D008A3286 /* Assets.xcassets */,
 				CEA62CC9255BE62D008A3286 /* LaunchScreen.storyboard */,
 				CEA62CCC255BE62D008A3286 /* Info.plist */,
+				CEA62CF4255BE89A008A3286 /* PlayersViewController.swift */,
+				CEA62CF9255BEBDF008A3286 /* PlayerDetailsViewController.swift */,
+				CEA62CFE255BFFDC008A3286 /* Player.swift */,
 			);
 			path = NBAPlayers;
 			sourceTree = "<group>";
@@ -258,9 +264,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CEA62CC3255BE62B008A3286 /* ViewController.swift in Sources */,
 				CEA62CBF255BE62B008A3286 /* AppDelegate.swift in Sources */,
 				CEA62CC1255BE62B008A3286 /* SceneDelegate.swift in Sources */,
+				CEA62CFA255BEBDF008A3286 /* PlayerDetailsViewController.swift in Sources */,
+				CEA62CFF255BFFDC008A3286 /* Player.swift in Sources */,
+				CEA62CF5255BE89A008A3286 /* PlayersViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
