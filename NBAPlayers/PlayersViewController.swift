@@ -9,9 +9,9 @@ import UIKit
 
 class PlayersViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     let players: [Player] = [
-        Player(name: "LeBrone James", position: "SF", height: "6'6", teamName: "Los Angeles Lakers"),
-        Player(name: "Antony Davis", position: "PF", height: "7'0", teamName: "Los Angeles Lakers"),
-        Player(name: "Jimmy Butler", position: "SG", height: "6'4", teamName: "Miami Heat")
+        Player(name: "LeBrone James", position: "SF", height: "6'6", team: lakers),
+        Player(name: "Antony Davis", position: "PF", height: "7'0", team: lakers),
+        Player(name: "Jimmy Butler", position: "SG", height: "6'4", team: heat)
     
     ]
     override func viewDidLoad() {
@@ -29,7 +29,7 @@ class PlayersViewController: UIViewController, UITableViewDataSource, UITableVie
         let cell = tableView.dequeueReusableCell(withIdentifier: "PlayerCell", for: indexPath)
         let player = players[indexPath.row]
         cell.textLabel?.text = player.name
-        cell.detailTextLabel?.text = player.teamName
+        cell.detailTextLabel?.text = player.team.fullName
         return cell
     }
 

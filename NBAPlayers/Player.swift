@@ -11,6 +11,6 @@ struct Player {
     let name: String
     let position:String
     let height: String
-    let teamName: String
+    let team: Team
     
 }
