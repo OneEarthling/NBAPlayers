@@ -28,23 +28,23 @@
         <scene sceneID="cOF-EZ-LVb">
             <objects>
                 <viewController id="edb-E6-5h6" customClass="PlayersViewController" customModule="NBAPlayers" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="nzZ-mj-RFN">
+                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="nzZ-mj-RFN">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="o2S-iP-3L2">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="o2S-iP-3L2">
                                 <rect key="frame" x="0.0" y="39" width="414" height="818"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="PlayerCell" textLabel="79I-J5-F36" detailTextLabel="YHn-8B-Fac" style="IBUITableViewCellStyleSubtitle" id="GgX-TR-6v4">
-                                        <rect key="frame" x="0.0" y="55.5" width="414" height="55.5"/>
+                                        <rect key="frame" x="0.0" y="55.5" width="414" height="56"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="GgX-TR-6v4" id="7Xq-Pq-qaX">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="55.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="79I-J5-F36">
-                                                    <rect key="frame" x="20" y="10" width="33" height="20.5"/>
+                                                    <rect key="frame" x="20" y="9" width="33" height="20.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -66,18 +66,44 @@
                                     <outlet property="delegate" destination="edb-E6-5h6" id="3mc-yI-aQ9"/>
                                 </connections>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VuN-la-xYg">
+                                <rect key="frame" x="184" y="433" width="47" height="30"/>
+                                <state key="normal" title="Reload"/>
+                                <connections>
+                                    <action selector="onReloadButtonTapped:" destination="edb-E6-5h6" eventType="touchUpInside" id="LAs-kN-x6v"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Что-то пошло не так" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xVO-X0-Koc">
+                                <rect key="frame" x="186" y="437" width="165" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" systemColor="systemPinkColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="medium" id="YQJ-CR-Rar">
+                                <rect key="frame" x="0.0" y="426" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="26R-fZ-J8z"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="26R-fZ-J8z" firstAttribute="trailing" secondItem="o2S-iP-3L2" secondAttribute="trailing" id="2pQ-mU-z4y"/>
+                            <constraint firstItem="VuN-la-xYg" firstAttribute="top" secondItem="xVO-X0-Koc" secondAttribute="bottom" constant="-70" id="5fr-wE-Ayt"/>
+                            <constraint firstItem="VuN-la-xYg" firstAttribute="centerX" secondItem="26R-fZ-J8z" secondAttribute="centerX" id="Hrt-RI-apL"/>
                             <constraint firstItem="o2S-iP-3L2" firstAttribute="top" secondItem="26R-fZ-J8z" secondAttribute="top" id="IA1-5r-ma6"/>
                             <constraint firstItem="26R-fZ-J8z" firstAttribute="bottom" secondItem="o2S-iP-3L2" secondAttribute="bottom" id="JaU-92-ptj"/>
+                            <constraint firstItem="YQJ-CR-Rar" firstAttribute="centerY" secondItem="o2S-iP-3L2" secondAttribute="centerY" id="Khx-5Z-dYt"/>
+                            <constraint firstItem="YQJ-CR-Rar" firstAttribute="centerX" secondItem="26R-fZ-J8z" secondAttribute="centerX" id="QYl-97-eJQ"/>
+                            <constraint firstItem="xVO-X0-Koc" firstAttribute="centerX" secondItem="26R-fZ-J8z" secondAttribute="centerX" id="hsg-jH-ygq"/>
+                            <constraint firstItem="xVO-X0-Koc" firstAttribute="centerY" secondItem="26R-fZ-J8z" secondAttribute="centerY" id="mSH-9O-beX"/>
                             <constraint firstItem="o2S-iP-3L2" firstAttribute="leading" secondItem="26R-fZ-J8z" secondAttribute="leading" id="vn4-Iu-ypj"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Players" id="Lnd-fd-wIo"/>
                     <connections>
+                        <outlet property="activityIndicatorView" destination="YQJ-CR-Rar" id="vhp-tf-L3V"/>
+                        <outlet property="errorButton" destination="VuN-la-xYg" id="3Oa-11-qpz"/>
+                        <outlet property="errorLabel" destination="xVO-X0-Koc" id="0Af-Yo-cfH"/>
                         <outlet property="tableView" destination="o2S-iP-3L2" id="S6H-GF-8tw"/>
                     </connections>
                 </viewController>
@@ -194,6 +220,9 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

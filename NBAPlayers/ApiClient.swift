@@ -24,7 +24,7 @@ class ApiClientImpl: ApiClient {
         urlRequest.httpMethod = "GET"
         
         let dataTask = session.dataTask(with: urlRequest, completionHandler: { data, response, error in
-            
+                        
             guard let data = data else {
                 onResult(.failure(ApiError.noData))
                 return
