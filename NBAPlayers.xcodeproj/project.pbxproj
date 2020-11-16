@@ -89,8 +89,37 @@
 		CE90D04B256283760047328E /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				CEDE41B1256268CA007B5ADE /* Team.swift */,
+				CEA62CFE255BFFDC008A3286 /* Player.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		CE99AB262562D72700EB79D7 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				CE90D046256281840047328E /* ApiClient.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		CE99AB272562D75C00EB79D7 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				CEA62CF4255BE89A008A3286 /* PlayersViewController.swift */,
+				CEA62CF9255BEBDF008A3286 /* PlayerDetailsViewController.swift */,
+				CEDE41B925626BFF007B5ADE /* TeamDetailsViewController.swift */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		CE99AB282562D77300EB79D7 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				CEA62CC4255BE62B008A3286 /* Main.storyboard */,
+				CEA62CC9255BE62D008A3286 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
 		CEA62CB2255BE62B008A3286 = {
@@ -116,19 +145,14 @@
 		CEA62CBD255BE62B008A3286 /* NBAPlayers */ = {
 			isa = PBXGroup;
 			children = (
+				CE99AB282562D77300EB79D7 /* Storyboards */,
+				CE99AB272562D75C00EB79D7 /* Screens */,
+				CE99AB262562D72700EB79D7 /* Network */,
 				CE90D04B256283760047328E /* Models */,
 				CEA62CBE255BE62B008A3286 /* AppDelegate.swift */,
 				CEA62CC0255BE62B008A3286 /* SceneDelegate.swift */,
-				CEA62CC4255BE62B008A3286 /* Main.storyboard */,
 				CEA62CC7255BE62D008A3286 /* Assets.xcassets */,
-				CEA62CC9255BE62D008A3286 /* LaunchScreen.storyboard */,
-				CEA62CF4255BE89A008A3286 /* PlayersViewController.swift */,
-				CE90D046256281840047328E /* ApiClient.swift */,
-				CEA62CF9255BEBDF008A3286 /* PlayerDetailsViewController.swift */,
-				CEDE41B925626BFF007B5ADE /* TeamDetailsViewController.swift */,
 				CEA62CCC255BE62D008A3286 /* Info.plist */,
-				CEA62CFE255BFFDC008A3286 /* Player.swift */,
-				CEDE41B1256268CA007B5ADE /* Team.swift */,
 			);
 			path = NBAPlayers;
 			sourceTree = "<group>";
