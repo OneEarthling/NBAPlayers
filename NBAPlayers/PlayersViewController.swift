@@ -8,17 +8,28 @@
 import UIKit
 
 class PlayersViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
-    let players: [Player] = [
-        Player(name: "LeBrone James", position: "SF", height: "6'6", team: lakers),
-        Player(name: "Antony Davis", position: "PF", height: "7'0", team: lakers),
-        Player(name: "Jimmy Butler", position: "SG", height: "6'4", team: heat)
+        
+    @IBOutlet weak var tableView: UITableView!
     
-    ]
+    var players: [Player] = []
+    let apiclient: ApiClient = ApiClientImpl()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         navigationController?.navigationBar.prefersLargeTitles = true
-
+        apiclient.getPlayers(onResult: { result in
+            DispatchQueue.main.async {
+                switch result {
+                case .success(let players):
+                    self.players = players
+                    self.tableView.reloadData()
+                case .failure:
+                    self.players = []
+                }
+            }
+            
+        })
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -34,6 +45,7 @@ class PlayersViewController: UIViewController, UITableViewDataSource, UITableVie
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("was pressed")
         let storyboard = UIStoryboard(name: "Main", bundle: .main)
         let playersDetailViewController = storyboard.instantiateViewController(identifier: "PlayerDetailsViewController") as PlayerDetailsViewController
         let player = players[indexPath.row]

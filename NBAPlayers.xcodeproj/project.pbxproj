@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE90D047256281840047328E /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE90D046256281840047328E /* ApiClient.swift */; };
 		CEA62CBF255BE62B008A3286 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA62CBE255BE62B008A3286 /* AppDelegate.swift */; };
 		CEA62CC1255BE62B008A3286 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA62CC0255BE62B008A3286 /* SceneDelegate.swift */; };
 		CEA62CC6255BE62B008A3286 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEA62CC4255BE62B008A3286 /* Main.storyboard */; };
@@ -39,6 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CE90D046256281840047328E /* ApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
 		CEA62CBB255BE62B008A3286 /* NBAPlayers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NBAPlayers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEA62CBE255BE62B008A3286 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CEA62CC0255BE62B008A3286 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -84,6 +86,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CE90D04B256283760047328E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		CEA62CB2255BE62B008A3286 = {
 			isa = PBXGroup;
 			children = (
@@ -107,17 +116,19 @@
 		CEA62CBD255BE62B008A3286 /* NBAPlayers */ = {
 			isa = PBXGroup;
 			children = (
+				CE90D04B256283760047328E /* Models */,
 				CEA62CBE255BE62B008A3286 /* AppDelegate.swift */,
 				CEA62CC0255BE62B008A3286 /* SceneDelegate.swift */,
 				CEA62CC4255BE62B008A3286 /* Main.storyboard */,
 				CEA62CC7255BE62D008A3286 /* Assets.xcassets */,
 				CEA62CC9255BE62D008A3286 /* LaunchScreen.storyboard */,
 				CEA62CF4255BE89A008A3286 /* PlayersViewController.swift */,
+				CE90D046256281840047328E /* ApiClient.swift */,
 				CEA62CF9255BEBDF008A3286 /* PlayerDetailsViewController.swift */,
 				CEDE41B925626BFF007B5ADE /* TeamDetailsViewController.swift */,
+				CEA62CCC255BE62D008A3286 /* Info.plist */,
 				CEA62CFE255BFFDC008A3286 /* Player.swift */,
 				CEDE41B1256268CA007B5ADE /* Team.swift */,
-				CEA62CCC255BE62D008A3286 /* Info.plist */,
 			);
 			path = NBAPlayers;
 			sourceTree = "<group>";
@@ -273,6 +284,7 @@
 				CEDE41B2256268CA007B5ADE /* Team.swift in Sources */,
 				CEA62CBF255BE62B008A3286 /* AppDelegate.swift in Sources */,
 				CEA62CC1255BE62B008A3286 /* SceneDelegate.swift in Sources */,
+				CE90D047256281840047328E /* ApiClient.swift in Sources */,
 				CEA62CFA255BEBDF008A3286 /* PlayerDetailsViewController.swift in Sources */,
 				CEA62CFF255BFFDC008A3286 /* Player.swift in Sources */,
 				CEDE41BA25626BFF007B5ADE /* TeamDetailsViewController.swift in Sources */,
